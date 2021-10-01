@@ -1,0 +1,19 @@
+:root {
+   --spotify-color: #1DD75F;
+   --text-primary: #ffffff;
+   --text-secondary: #888; 
+   --font-primary: 'Poppins', sans-serif;
+   --bg-color-primary: #111;
+   --bg-color-secondary: #000;
+   --transition-hover: 250ms ease-in-out;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: var(--bg-color-primary);
+}
