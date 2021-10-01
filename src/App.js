@@ -1,10 +1,14 @@
+import FriendActivity from './components/FriendActivity'
+import Home from './components/Home'
+import Sidebar from './components/Sidebar'
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <div className='App'>
+         <Sidebar className='sidebar' />
+         <Home className='home' />
+         <FriendActivity className='friendSidebar' />
+      </div>
   );
 }
 

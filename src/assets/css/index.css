@@ -17,3 +17,171 @@
 body {
    background-color: var(--bg-color-primary);
 }
+.btn {
+   display: inline-block;
+   background-color: #1bb954;
+   padding: 1em 2em;
+   font-size: 2em;
+   color: var(--text-primary);
+   font-family: var(--font-primary);
+   text-decoration: none;
+   border-radius: 2em;
+   white-space: nowrap;
+   transition: var(--transition-hover);
+}
+
+.btn:hover {
+   background-color: var(--spotify-green);
+   cursor: pointer;
+}
+
+.sidebar, .friendSidebar {
+   background-color: var(--bg-color-secondary);
+   padding: 1.5em 1em;
+}
+
+/* Grid Set up */
+.sidebar {
+   grid-area: sidebar;
+}
+
+.home {
+   margin: 1.5em 1em;
+   grid-area: home;
+}
+
+.friendSidebar {
+   grid-area: friendSidebar;
+}
+
+.App {
+   display: grid;
+   grid-template-columns: minmax(5vw, 1fr) 5fr minmax(5vw, 1fr);
+   grid-template-areas: 
+   'sidebar home friendSidebar';
+   height: 100vh;
+}
+
+
+/* Fonts */
+h1, h2, h3 {
+   color: var(--text-primary);
+   font-family: var(--font-primary);
+}
+
+a, p {
+   color: var(--text-secondary);
+}
+
+/* Home */
+.home {
+   margin-left: 2em;
+}
+
+.home h1, .home a {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+}
+
+.blockTitle a {
+   color: var(--text-primary);
+   grid-area: heading;
+}
+
+.home a {
+   color: white;
+   text-decoration: none;
+   grid-area: heading;
+}
+
+.home a:hover {
+   text-decoration: underline;
+}
+
+.homeBlock {
+   margin-left: 0;
+   margin-right: 0;
+   display: grid;
+   grid-template-columns: 15fr 1fr;
+   grid-template-areas: 
+   "heading more"
+   "tiles tiles";
+}
+
+.more a {
+   font-size: .8em;
+   color: var(--text-secondary);
+   grid-area: more;
+   
+}
+
+/* Sidebar */
+.sidebar {
+   display: flex;
+   flex-flow: column;
+}
+
+.sidebar a {
+   font-family: var(--font-primary);
+   font-size: .8em;
+   margin-bottom: .75em;
+   text-decoration: none;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.sidebar a:hover {
+   color: var(--text-primary);
+}
+
+/* Tiles */
+.tiles {
+   grid-area: tiles;
+}
+
+/* Friend Sidebar */
+.friend {
+   margin-bottom: .75em;
+}
+
+.friendSidebar h2 {
+   margin-bottom: 1em;
+}
+
+.friend button {
+   border: none;
+   color: var(--text-secondary);
+   background: inherit;
+}
+
+#friendName {
+   font-size: .8em;
+   font-weight: 700;
+}
+
+#friendName:hover, .songInfo a:hover {
+   text-decoration: underline;
+   cursor: pointer;
+   color: var(--text-primary);
+}
+
+.friendSidebar button, .friendSidebar p {
+   font-family: var(--font-primary);
+   font-size: .65em;
+}
+
+.friendSidebar button:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.friendPlayTrack::after {
+   content: '';
+   color: var(--text-primary);
+}
+
+.lastPlayed {
+   display: inline-block;
+   margin-left: 2em;
+}
