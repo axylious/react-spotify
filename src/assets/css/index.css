@@ -17,23 +17,6 @@
 body {
    background-color: var(--bg-color-primary);
 }
-.btn {
-   display: inline-block;
-   background-color: #1bb954;
-   padding: 1em 2em;
-   font-size: 2em;
-   color: var(--text-primary);
-   font-family: var(--font-primary);
-   text-decoration: none;
-   border-radius: 2em;
-   white-space: nowrap;
-   transition: var(--transition-hover);
-}
-
-.btn:hover {
-   background-color: var(--spotify-green);
-   cursor: pointer;
-}
 
 .sidebar, .friendSidebar {
    background-color: var(--bg-color-secondary);
@@ -46,7 +29,6 @@ body {
 }
 
 .home {
-   margin: 1.5em 1em;
    grid-area: home;
 }
 
@@ -56,7 +38,7 @@ body {
 
 .App {
    display: grid;
-   grid-template-columns: minmax(5vw, 1fr) 5fr minmax(5vw, 1fr);
+   grid-template-columns: minmax(200px, 1fr) 5fr minmax(200px, 1fr);
    grid-template-areas: 
    'sidebar home friendSidebar';
    height: 100vh;
@@ -74,8 +56,8 @@ a, p {
 }
 
 /* Home */
-.home {
-   margin-left: 2em;
+.home, .search {
+   margin: 1.5em 1em;
 }
 
 .home h1, .home a {
@@ -89,7 +71,7 @@ a, p {
 }
 
 .home a {
-   color: white;
+   color: var(--text-primary);
    text-decoration: none;
    grid-area: heading;
 }
@@ -124,11 +106,13 @@ a, p {
 .sidebar a {
    font-family: var(--font-primary);
    font-size: .8em;
+   font-weight: 700;
    margin-bottom: .75em;
    text-decoration: none;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+   transition: var(--transition-hover);
 }
 
 .sidebar a:hover {

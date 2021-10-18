@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types'
-import GetPlaylist from './GetPlaylist'
-
+import { Link } from 'react-router-dom'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Sidebar = ({className}) => {
    return (
       <div className={className}>
-         
+         <Link to='/'><HomeOutlinedIcon />Home</Link>
+         <Link to='/search'><SearchIcon />Search</Link>
          <h2>Your Playlists</h2>
 
-         <GetPlaylist />
       </div>
    )
 }
