@@ -3,6 +3,7 @@ import FriendActivity from './components/FriendActivity'
 import Home from './components/Home'
 import Sidebar from './components/Sidebar'
 import Search from './components/Search'
+import Library from './components/Library'
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/search' component={Search} />
+        <Route path='/library' component={Library} />
       </Switch>
       <FriendActivity className='friendSidebar' />
     </div>

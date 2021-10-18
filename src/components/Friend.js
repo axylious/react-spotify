@@ -1,9 +1,17 @@
 import PropTypes from 'prop-types'
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 
 const Friend = ({className}) => {
    return (
       <div className={className}>
-         {/* <img /> */}
+         <div className='img'>
+            <PersonOutlinedIcon sx={{
+               position: 'relative',
+               top: 7,
+               left: 8,
+               color: 'white',
+               }} />
+         </div>
          <button id='friendName'>Friends Name</button>
          <p className='lastPlayed'>2 hr</p>
          <div className='songInfo'>

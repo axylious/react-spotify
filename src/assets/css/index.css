@@ -56,7 +56,7 @@ a, p {
 }
 
 /* Home */
-.home, .search {
+.home, .search, .library {
    margin: 1.5em 1em;
 }
 
@@ -105,7 +105,7 @@ a, p {
 
 .sidebar a {
    font-family: var(--font-primary);
-   font-size: .8em;
+   font-size: 1em;
    font-weight: 700;
    margin-bottom: .75em;
    text-decoration: none;
@@ -131,6 +131,15 @@ a, p {
 
 .friendSidebar h2 {
    margin-bottom: 1em;
+}
+
+.friend .img {
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   background-color: #404040;
+   float: left;
+   margin-right: 1em;
 }
 
 .friend button {
