@@ -1,5 +1,5 @@
 :root {
-   --spotify-color: #1DD75F;
+   --btn-color: #1DD75F;
    --text-primary: #ffffff;
    --text-secondary: #888; 
    --font-primary: 'Poppins', sans-serif;
@@ -160,7 +160,7 @@ a, p {
    font-weight: 700;
 }
 
-#friendName:hover, .songInfo a:hover {
+#friendName:hover, .songInfo button:hover {
    text-decoration: underline;
    cursor: pointer;
    color: var(--text-primary);
@@ -174,11 +174,6 @@ a, p {
 .friendSidebar button:hover {
    text-decoration: underline;
    cursor: pointer;
-}
-
-.friendPlayTrack::after {
-   content: '';
-   color: var(--text-primary);
 }
 
 .lastPlayed {

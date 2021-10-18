@@ -7,8 +7,8 @@ const Friend = ({className}) => {
          <button id='friendName'>Friends Name</button>
          <p className='lastPlayed'>2 hr</p>
          <div className='songInfo'>
-            <button className='friendPlayTrack'>Current Track </button>
-            <button className='friendPlayTrack'>Artist</button>
+            <button className='friendPlay' id='track'>Current Track </button>
+            <button className='friendPlay' id='artist'>Artist</button>
          </div>
          <button className='friendPlayAlbum'>Current Album</button>
       </div>
