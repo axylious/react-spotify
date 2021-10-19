@@ -10,7 +10,7 @@ const Home = ({className}) => {
 }
 
 Home.defaultProps = {
-   className: 'home',
+   className: '',
 }
 
 Home.propTypes = {

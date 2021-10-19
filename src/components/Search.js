@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 const Search = ({className}) => {
    return (
       <div className={className}>
-         <h1>Search</h1>
+         <h2>Top Genres</h2>
       </div>
    )
 }
