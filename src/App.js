@@ -4,6 +4,9 @@ import Home from './components/Home'
 import Sidebar from './components/Sidebar'
 import Search from './components/Search'
 import Library from './components/Library'
+import CreatePlaylist from './components/CreatePlaylist';
+import LikedSongs from './components/LikedSongs';
+import Playlist from './components/Playlist'
 
 
 const App = () => {
@@ -11,9 +14,24 @@ const App = () => {
     <div className='App'>
       <Sidebar className='sidebar' />
       <Switch>
-        <Route path='/' component={Home} exact />
-        <Route path='/search' component={Search} />
-        <Route path='/library' component={Library} />
+        <Route path='/' exact>
+          <Home className='home'/>
+        </Route>
+        <Route path='/search'>
+          <Search className='search' />
+        </Route>
+        <Route path='/library'>
+          <Library className='library' />
+        </Route>
+        <Route path='/create-playlist'>
+          <CreatePlaylist className='createPlaylist' />
+        </Route>
+        <Route path='/liked-songs'>
+          <LikedSongs className='songs' />
+        </Route>
+        <Route path='/playlist'>
+          <Playlist className='songs' />
+        </Route>
       </Switch>
       <FriendActivity className='friendSidebar' />
     </div>

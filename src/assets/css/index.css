@@ -56,8 +56,8 @@ a, p {
 }
 
 /* Home */
-.home, .search, .library {
-   margin: 1.5em 1em;
+.home, .search, .library, .createPlaylist, .songs {
+   margin: 2em;
 }
 
 .home h1, .home a {
@@ -119,6 +119,12 @@ a, p {
    color: var(--text-primary);
 }
 
+.sideGroup {
+   display: flex;
+   flex-flow: column;
+   margin-bottom: 2em;
+}
+
 /* Tiles */
 .tiles {
    grid-area: tiles;
@@ -126,7 +132,7 @@ a, p {
 
 /* Friend Sidebar */
 .friend {
-   margin-bottom: .75em;
+   margin-bottom: 1.5em;
 }
 
 .friendSidebar h2 {
@@ -172,4 +178,8 @@ a, p {
 .lastPlayed {
    display: inline-block;
    margin-left: 2em;
+}
+
+.friendPlay+.friendPlay {
+   margin-left: .5em;
 }
