@@ -38,7 +38,7 @@ body {
 
 .App {
    display: grid;
-   grid-template-columns: minmax(200px, 1fr) 5fr minmax(200px, 1fr);
+   grid-template-columns: minmax(200px, 1fr) 5fr minmax(225px, 1fr);
    grid-template-areas: 
    'sidebar home friendSidebar';
    height: 100vh;
@@ -80,23 +80,6 @@ a, p {
    text-decoration: underline;
 }
 
-.homeBlock {
-   margin-left: 0;
-   margin-right: 0;
-   display: grid;
-   grid-template-columns: 15fr 1fr;
-   grid-template-areas: 
-   "heading more"
-   "tiles tiles";
-}
-
-.more a {
-   font-size: .8em;
-   color: var(--text-secondary);
-   grid-area: more;
-   
-}
-
 /* Sidebar */
 .sidebar {
    display: flex;
@@ -104,15 +87,17 @@ a, p {
 }
 
 .sidebar a {
+   display: inline-flex;
    font-family: var(--font-primary);
    font-size: 1em;
    font-weight: 700;
-   margin-bottom: .75em;
+   padding: .5em 1em;
    text-decoration: none;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
    transition: var(--transition-hover);
+   align-items: center;
 }
 
 .sidebar a:hover {
@@ -140,7 +125,13 @@ a, p {
 .sidePlaylists .playlists {
    font-size: .9em;
    font-weight: 400;
-   margin-bottom: 1.25em;
+   margin-bottom: .5em;
+}
+
+.active {
+   background-color: rgba(136, 136, 136, 0.25);
+   color: var(--text-primary);
+   border-radius: .25em;
 }
 
 /* Tiles */

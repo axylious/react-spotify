@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import LibraryMusicOutlinedIcon from '@mui/icons-material/LibraryMusicOutlined';
@@ -10,39 +10,35 @@ const Sidebar = ({className}) => {
    return (
       <div className={className}>
          <div className='sideGroup'>
-            <Link to='/'>
+            <NavLink exact to='/'>
                <HomeOutlinedIcon sx={{
                   position: 'relative',
-                  top: 5,
                   mr: 1.5,
                }}/>
                Home
-            </Link>
+            </NavLink>
 
-            <Link to='/search'>
+            <NavLink to='/search'>
                <SearchIcon sx={{
                   position: 'relative',
-                  top: 5,
                   mr: 1.5,
                }}/>
                Search
-            </Link>
+            </NavLink>
 
-            <Link to='/library'>
+            <NavLink to='/library'>
                <LibraryMusicOutlinedIcon sx={{
                   position: 'relative',
-                  top: 5,
                   mr: 1.5,
                }}/>
                Your Library
-            </Link>
+            </NavLink>
          </div>
          
          
          <Link to='/create-playlist'>
             <AddBoxIcon sx={{
                position: 'relative',
-               top: 5,
                mr: 1.5,
             }}/>
             Create Playlist
@@ -51,17 +47,30 @@ const Sidebar = ({className}) => {
          <Link to='/liked-songs'>
             <FavoriteBorderIcon sx={{
                position: 'relative',
-               top: 5,
                mr: 1.5,
             }}/>
             Liked Songs
          </Link>
 
          <div className='sidePlaylists'>
-            <Link to='/playlist' className='playlists'>Playlist #1</Link>
-            <Link to='/playlist' className='playlists'>RapCaviar</Link>
-            <Link to='/playlist' className='playlists'>Liked from Radio</Link>
-            <Link to='/playlist' className='playlists'>Discover Weekly</Link>
+            <Link to={{
+               pathname: '/playlist',
+               state: {title: 'Playlist #1'},
+            }} className='playlists'> Playlist #1
+            </Link>
+
+            <Link to={{
+               pathname: '/playlist',
+               state: {title: 'RapCaviar'},
+            }} className='playlists'>RapCaviar</Link>
+            <Link to={{
+               pathname: '/playlist',
+               state: {title: 'Liked from Radio'},
+            }} className='playlists'>Liked from Radio</Link>
+            <Link to={{
+               pathname: '/playlist',
+               state: {title: 'Discover Weekly'},
+            }} className='playlists'>Discover Weekly</Link>
          </div>
       </div>
    )
