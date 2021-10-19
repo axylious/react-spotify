@@ -12,7 +12,7 @@ const Friend = ({className}) => {
                color: 'white',
                }} />
          </div>
-         <button id='friendName'>Friends Name</button>
+         <button className='friendName'>Friends Name</button>
          <p className='lastPlayed'>2 hr</p>
          <div className='songInfo'>
             <button className='friendPlay' id='track'>Current Track </button>

@@ -1,32 +1,42 @@
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
+import Tile from './Tile'
 
-const LongBlock = ({title, className}) => {
+const LongBlock = ({className}) => {
    return (
       <div className={className}>
-         <h1>
-            {title}
-            {dayOrNight()}
-         </h1>
+         <Link to={{
+            pathname: '/playlist',
+            state: {title: 'Liked Songs'}
+         }}><Tile className='longTile' title='Liked Songs' />
+         </Link>
+
+         <Link to={{
+            pathname: '/playlist',
+            state: {title: 'Your Favorite Album'}
+         }}><Tile className='longTile' title='Your Favorite Album' />
+         </Link>
+
+         <Link to={{
+            pathname: '/playlist',
+            state: {title: 'Liked Songs'}
+         }}><Tile className='longTile' title='Liked Songs' />
+         </Link>
+
+         <Link to={{
+            pathname: '/playlist',
+            state: {title: 'Your Favorite Album'}
+         }}><Tile className='longTile' title='Your Favorite Album' />
+         </Link>
       </div>
    )
 }
 
-
-function dayOrNight() {
-   let hour = new Date().getHours();
-   let ampm = hour <= 12 ? ' morning' : 
-      (hour >= 18) ? ' evening' : ' afternoon';
-
-   return ampm 
-}
-
 LongBlock.defaultProps = {
-   title: '',
    className: '',
 }
 
 LongBlock.propTypes = {
-   title: PropTypes.string,
    className: PropTypes.string,
 }
 
