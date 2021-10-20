@@ -6,12 +6,26 @@
    --bg-color-primary: #111;
    --bg-color-secondary: #000;
    --transition-hover: 250ms ease-in-out;
+
+   --lh: 1;
 }
 
 * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: rgba(136, 136, 136, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: rgba(136, 136, 136, 0.5);
 }
 
 body {
@@ -57,7 +71,8 @@ a, p {
 
 /* Home */
 .home, .search, .library, .createPlaylist, .songs {
-   margin: 2em;
+   overflow-y: scroll;
+   padding: 2em;
 }
 
 .home h1, .home a {
@@ -65,8 +80,12 @@ a, p {
    font-weight: 700;
 }
 
-.home h1 {
+.home>h1, .home>h2 {
    margin-bottom: .5em;
+}
+
+.home>h2 {
+   margin-top: 2em;
 }
 
 /* Sidebar */
@@ -183,6 +202,7 @@ a, p {
 }
 
 /* Tiles */
+/* LongBlock */
 .longBlock {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,7 +210,7 @@ a, p {
    row-gap: 1em;
 }
 
-.longBlock a {
+.longBlock a, .block a {
    text-decoration: none;
 }
 
@@ -208,12 +228,12 @@ a, p {
    background: rgba(136, 136, 136, 0.5);
 }
 
-.tileWrapper {
+.longBlock .tileWrapper {
    display: flex;
    align-items: center;
 }
 
-.tilePic {
+.longBlock .tilePic {
    height: 100px;
    width: 100px;
    background: var(--btn-color);
@@ -228,7 +248,6 @@ a, p {
 .longTile svg {
    color: var(--btn-color);
    font-size: 2.5em;
-   
    opacity: 0;
    transform: translateY(10%);
    transition: var(--transition-hover);
@@ -237,4 +256,65 @@ a, p {
 .longTile:hover svg {
    opacity: 1;
    transform: translateY(0);
+}
+
+.longTile svg:hover {
+   font-size: 2.75em;
+}
+
+/* Blocks */
+.block {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+   column-gap: 1.5em;
+   row-gap: 1em;
+}
+
+.tile {
+   min-height: 300px;
+   display: flex;
+   flex-flow: column;
+   padding: 1em 1em;
+   border-radius: .25em;
+   background: rgba(136, 136, 136, 0.1);
+   transition: var(--transition-hover);
+}
+
+.tile:hover {
+   background: rgba(136, 136, 136, 0.25);
+}
+
+.tile .tilePic {
+   min-height: 160px;
+   min-width: 160px;
+   background: var(--btn-color);
+   border-radius: .1em;
+   margin-bottom: -1.5em;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.tile svg {
+   position: relative;
+   top: -.75em;
+   left: 2.25em;
+   font-size: 3em;
+   transform: translateY(10%);
+   transition: var(--transition-hover);
+}
+
+.tile h2 {
+   font-size: .9em;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.tile p {
+   font-size: .8em;
+   font-weight: 400;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }

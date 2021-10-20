@@ -2,27 +2,26 @@ import PropTypes from 'prop-types'
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 
-const Tile = ({title, className, desc}) => {
+const LongTile = ({title, className}) => {
    return (
       <div className={className}>
-         <div className='tilePic'></div>
+         <div className='tileWrapper'>
+            <div className='tilePic'></div>
+            <h2>{title}</h2>
+         </div>
          <PlayCircleIcon />
-         <h2>{title}</h2>
-         <p>{desc}</p>
       </div>   
    )
 }
 
-Tile.defaultProps = {
+LongTile.defaultProps = {
    className: '',
    title: '',
-   desc: '',
 }
 
-Tile.propTypes = {
+LongTile.propTypes = {
    className: PropTypes.string,
    title: PropTypes.string,
-   desc: PropTypes.string,
 }
 
-export default Tile
+export default LongTile

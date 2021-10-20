@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
-import Tile from './Tile'
+import LongTile from './LongTile'
 
 const LongBlock = ({className}) => {
    return (
@@ -8,25 +8,37 @@ const LongBlock = ({className}) => {
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Liked Songs'}
-         }}><Tile className='longTile' title='Liked Songs' />
+         }}><LongTile className='longTile' title='Liked Songs' />
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Your Favorite Album'}
-         }}><Tile className='longTile' title='Your Favorite Album' />
+         }}><LongTile className='longTile' title='Your Favorite Album' />
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Liked Songs'}
-         }}><Tile className='longTile' title='Liked Songs' />
+         }}><LongTile className='longTile' title='Liked Songs' />
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Your Favorite Album'}
-         }}><Tile className='longTile' title='Your Favorite Album' />
+         }}><LongTile className='longTile' title='Your Favorite Album' />
+         </Link>
+         
+         <Link to={{
+            pathname: '/playlist',
+            state: {title: 'Liked Songs'}
+         }}><LongTile className='longTile' title='Liked Songs' />
+         </Link>
+
+         <Link to={{
+            pathname: '/playlist',
+            state: {title: 'Your Favorite Album'}
+         }}><LongTile className='longTile' title='Your Favorite Album' />
          </Link>
       </div>
    )
