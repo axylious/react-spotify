@@ -40,7 +40,7 @@ const ShowsBlock = ({className, title}) => {
          <Link to={{
             pathname: '/podcast',
             state: {title: 'Coding Blocks'}
-         }}><Tile className='tile' title='Coding Blocks' desc='Coding Blocks'/>
+         }}><Tile className='tile podcast' title='Coding Blocks' desc='Coding Blocks'/>
          </Link>
       </div>
       </>

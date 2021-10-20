@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import Tile from './Tile'
 
-const RecentBlock = ({className, title, recent}) => {
+const RecentBlock = ({className, title}) => {
    return (
       <>
       <h2>{title}</h2>
