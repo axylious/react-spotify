@@ -10,37 +10,37 @@ const JumpBackBlock = ({className, title}) => {
          <Link to={{
             pathname: '/playlist',
             state: {title: 'AG Club Mix'}
-         }}><Tile className='tile' title='AG Club Mix' desc='Yeek, Isaiah Rashad, IDK and more'/>
+         }}><Tile className='tile' title='AG Club Mix' desc='Yeek, Isaiah Rashad, IDK and more' src='images/AG-Club-mix.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Isaiah Rashad Radio'}
-         }}><Tile className='tile' title='Isaiah Rashad Radio' desc='By Spotify'/>
+         }}><Tile className='tile' title='Isaiah Rashad Radio' desc='By Spotify' src='images/Isaiah-Rashad-radio.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Platinum Green'}
-         }}><Tile className='tile' title='Platinum Green' desc='Ryan Leahan'/>
+         }}><Tile className='tile' title='Platinum Green' desc='Ryan Leahan' src='images/platinum-green-Ryan-Leahan.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Abhi The Nomad'}
-         }}><Tile className='tile artist' title='Abhi The Nomad' desc='Artist'/>
+         }}><Tile className='tile artist' title='Abhi The Nomad' desc='Artist' src='images/Abhi-the-Nomad.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'The Melodic Blue'}
-         }}><Tile className='tile' title='The Melodic Blue' desc='Baby Keem'/>
+         }}><Tile className='tile' title='The Melodic Blue' desc='Baby Keem' src='images/the-melodic-blue-Baby-Keem.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Get Turnt'}
-         }}><Tile className='tile' title='Get Turnt' desc='Mode: Turnt'/>
+         }}><Tile className='tile' title='Get Turnt' desc='Mode: Turnt' src='images/get-turnt.png'/>
          </Link>
       </div>
       </>

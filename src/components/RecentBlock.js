@@ -10,37 +10,37 @@ const RecentBlock = ({className, title}) => {
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Mike Irish'}
-         }}><Tile className='tile artist' title='Mike Irish' desc='Artist'/>
+         }}><Tile className='tile artist' title='Mike Irish' desc='Artist' src='images/Mike-Irish.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Dan + Axel'}
-         }}><Tile className='tile' title='Dan+Axel' desc='A blend of music for Dan and Axel. Updates daily.'/>
+         }}><Tile className='tile' title='Dan+Axel' desc='A blend of music for Dan and Axel. Updates daily.' src='images/blend.png'/>
          </Link>
 
          <Link to={{
             pathname: '/podcast',
             state: {title: 'Simple Programmer Podcast'}
-         }}><Tile className='tile podcast' title='Simple Programmer Podcast' desc='John Sonmez'/>
+         }}><Tile className='tile podcast' title='Simple Programmer Podcast' desc='John Sonmez' src='images/simple-programmer.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'LIKE THAT'}
-         }}><Tile className='tile' title='LIKE THAT' desc='LORD$OFDOGTOWN'/>
+         }}><Tile className='tile' title='LIKE THAT' desc='LORD$OFDOGTOWN' src='images/LORD$OFDOGTOWN.png'/>
          </Link>
 
          <Link to={{
             pathname: '/playlist',
             state: {title: 'Up in Flames'}
-         }}><Tile className='tile' title='Up in Flames' desc='Łaszewo'/>
+         }}><Tile className='tile' title='Up in Flames' desc='Łaszewo' src='images/up-in-flames-Laszewo.png'/>
          </Link>
 
          <Link to={{
             pathname: '/podcast',
             state: {title: 'Choose FI | Financial Independence Podcast'}
-         }}><Tile className='tile podcast' title='Choose FI | Financial Independence Podcast' desc='Jonathan Mendonsa & Brad Barrett | Choose FI'/>
+         }}><Tile className='tile podcast' title='Choose FI | Financial Independence Podcast' desc='Jonathan Mendonsa & Brad Barrett | Choose FI' src='images/chooseFi.png'/>
          </Link>
       </div>
       </>

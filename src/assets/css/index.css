@@ -7,6 +7,8 @@
    --bg-color-secondary: #000;
    --transition-hover: 250ms ease-in-out;
 
+   --play-btn-bg: radial-gradient(white 0%, white 50%, transparent 60%);
+
    --lh: 1;
 }
 
@@ -133,7 +135,6 @@ a, p {
 .sidePlaylists .playlists {
    font-size: .9em;
    font-weight: 400;
-   margin-bottom: .5em;
 }
 
 .active {
@@ -234,10 +235,11 @@ a, p {
 }
 
 .longBlock .tilePic {
-   min-height: 80px;
-   min-width: 80px;
-   background: var(--btn-color);
+   height: 80px;
+   width: 80px;
+   background: var(--bg-color-primary);
    border-radius: .25em 0 0 .25em;
+   box-shadow: 6px 3px 10px rgba(0,0,0,.3);
 }
 
 .longTile h2 {
@@ -251,6 +253,8 @@ a, p {
 
 .longTile svg {
    color: var(--btn-color);
+   background: var(--play-btn-bg);
+   border-radius: 50%;
    font-size: 2.5em;
    opacity: 0;
    transform: translateY(10%);
@@ -279,7 +283,7 @@ a, p {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
    column-gap: 1.5em;
-   row-gap: 1em;
+   overflow: auto;
 }
 
 .tile {
@@ -297,17 +301,21 @@ a, p {
 }
 
 .tile .tilePic {
-   min-height: 160px;
-   min-width: 160px;
-   background: var(--btn-color);
+   height: 160px;
+   width: 160px;
+   background: var(--bg-color-primary);
    border-radius: .1em;
    margin-bottom: -1.5em;
    margin-left: auto;
    margin-right: auto;
+   box-shadow: 3px 9px 21px rgba(0,0,0,.5);
 }
 
 .tile svg {
    position: relative;
+   background: var(--play-btn-bg);
+   border-radius: 50%;
+   color: var(--btn-color);
    top: -.75em;
    left: 2.25em;
    font-size: 3em;
@@ -319,6 +327,10 @@ a, p {
 .tile:hover svg {
    opacity: 1;
    transform: translateY(0);
+}
+
+.tile svg:hover {
+   transform: scale(1.1);
 }
 
 .tile.podcast:hover svg {
