@@ -1,50 +1,80 @@
 import PropTypes from 'prop-types'
+import { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Tile from './Tile'
 
-const ShowsBlock = ({className, title}) => {
-   return (
-      <>
-      <h2>{title}</h2>
-      <div className={className}>
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Simple Programmer'}
-         }}><Tile className='tile podcast' title='Simple Programmer' desc='John Sonmez' src='images/simple-programmer.png'/>
-         </Link>
+class ShowsBlock extends Component {
+   constructor() {
+      super()
+      this.state={
+         tiles: [
+            {
+               title: 'Simple Programmer',
+               src: 'images/simple-programmer.png',
+               desc: 'John Sonmez',
+               className: 'tile podcast',
+               pathname: '/podcast',
+            },
+            {
+               title: 'Choose FI | Financial Independence Podcast',
+               src: 'images/chooseFI.png',
+               desc: 'Jonathan Mendonsa & Brad Barrett | Choose FI',
+               className: 'tile podcast',
+               pathname: '/podcast',
+            },
+            {
+               title: 'Learn to Code',
+               src: 'images/one-month.png',
+               desc: 'One Month',
+               className: 'tile podcast',
+               pathname: '/podcast',
+            },
+            {
+               title: 'JavaScript Jabber',
+               src: 'images/javascript-jabber.png',
+               desc: 'Top End Devs',
+               className: 'tile podcast',
+               pathname: '/podcast',
+            },
+            {
+               title: 'Developer Tea',
+               src: 'images/developer-tea.png',
+               desc: 'Jonathan Cutrell',
+               className: 'tile podcast',
+               pathname: '/podcast',
+            },
+            {
+               title: 'Coding Blocks',
+               src: 'images/coding-blocks.png',
+               desc: 'Coding Blocks',
+               className: 'tile podcast',
+               pathname: '/podcast',
+            },
+         ],      
+         seeAll: true,
+      }
+   }
 
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Choose FI | Financial Independence Podcast'}
-         }}><Tile className='tile podcast' title='Choose FI | Financial Independence Podcast' desc='Jonathan Mendonsa & Brad Barrett | Choose FI' src='images/chooseFI.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Learn to Code'}
-         }}><Tile className='tile podcast' title='Learn to Code' desc='One Month' src='images/one-month.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'JavaScript Jabber'}
-         }}><Tile className='tile podcast' title='JavaScript Jabber' desc='Top End Devs' src='images/javascript-jabber.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Developer Tea'}
-         }}><Tile className='tile podcast' title='Developer Tea' desc='Jonathan Cutrell' src='images/developer-tea.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Coding Blocks'}
-         }}><Tile className='tile podcast' title='Coding Blocks' desc='Coding Blocks' src='images/coding-blocks.png'/>
-         </Link>
-      </div>
-      </>
-   )
+   render() {
+      return (
+         <>
+         <h2>{this.props.title}</h2>
+         <div className={this.props.className}>
+         {
+            this.state.tiles.map(tile => {
+               return(
+                  <Link to={{
+                  pathname: tile.pathname,
+                  state: {title: tile.title}
+                  }}><Tile className={tile.className} title={tile.title} src={tile.src} desc={tile.desc}/>
+                  </Link>
+               )
+            })
+         }
+         </div>
+         </>
+      )
+   }
 }
 
 ShowsBlock.defaultProps = {

@@ -7,6 +7,7 @@ import Library from './components/Library'
 import CreatePlaylist from './components/CreatePlaylist';
 import LikedSongs from './components/LikedSongs';
 import Playlist from './components/Playlist'
+import SeeAll from './components/SeeAll'
 
 
 const App = () => {
@@ -31,6 +32,12 @@ const App = () => {
         </Route>
         <Route path='/playlist'>
           <Playlist className='songs' />
+        </Route>
+        <Route path='/podcast'>
+          <Playlist className='songs' />
+        </Route>
+        <Route path='/see-all'>
+          <SeeAll />
         </Route>
       </Switch>
       <FriendActivity className='friendSidebar' />
