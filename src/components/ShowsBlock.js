@@ -1,50 +1,94 @@
 import PropTypes from 'prop-types'
+import { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Tile from './Tile'
 
-const ShowsBlock = ({className, title}) => {
-   return (
-      <>
-      <h2>{title}</h2>
-      <div className={className}>
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Simple Programmer'}
-         }}><Tile className='tile podcast' title='Simple Programmer' desc='John Sonmez' src='images/simple-programmer.png'/>
-         </Link>
+class ShowsBlock extends Component {
+   constructor() {
+      super()
+      this.state={
+         tiles: [
+            {
+               title: 'Simple Programmer',
+               src: 'images/simple-programmer.png',
+               desc: 'John Sonmez',
+            },
+            {
+               title: 'Choose FI | Financial Independence Podcast',
+               src: 'images/chooseFI.png',
+               desc: 'Jonathan Mendonsa & Brad Barrett | Choose FI',
+            },
+            {
+               title: 'Learn to Code',
+               src: 'images/one-month.png',
+               desc: 'One Month',
+            },
+            {
+               title: 'JavaScript Jabber',
+               src: 'images/javascript-jabber.png',
+               desc: 'Top End Devs',
+            },
+            {
+               title: 'Developer Tea',
+               src: 'images/developer-tea.png',
+               desc: 'Jonathan Cutrell',
+            },
+            {
+               title: 'Coding Blocks',
+               src: 'images/coding-blocks.png',
+               desc: 'Coding Blocks',
+            },
+         ],
+         className: 'tile podcast',
+         pathname: '/podcast',      
+         seeAll: true,
+      }
+   }
 
+   render() {
+      return (
+         <>
+         <h2>{this.props.title}</h2>
+         <div className={this.props.className}>
          <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Choose FI | Financial Independence Podcast'}
-         }}><Tile className='tile podcast' title='Choose FI | Financial Independence Podcast' desc='Jonathan Mendonsa & Brad Barrett | Choose FI' src='images/chooseFI.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Learn to Code'}
-         }}><Tile className='tile podcast' title='Learn to Code' desc='One Month' src='images/one-month.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'JavaScript Jabber'}
-         }}><Tile className='tile podcast' title='JavaScript Jabber' desc='Top End Devs' src='images/javascript-jabber.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Developer Tea'}
-         }}><Tile className='tile podcast' title='Developer Tea' desc='Jonathan Cutrell' src='images/developer-tea.png'/>
-         </Link>
-
-         <Link to={{
-            pathname: '/podcast',
-            state: {title: 'Coding Blocks'}
-         }}><Tile className='tile podcast' title='Coding Blocks' desc='Coding Blocks' src='images/coding-blocks.png'/>
-         </Link>
-      </div>
-      </>
-   )
+               pathname: this.state.pathname,
+               state: {title: this.state.tiles[0].title}
+            }}><Tile className={this.state.className} title={this.state.tiles[0].title} src={this.state.tiles[0].src} desc={this.state.tiles[0].desc}/>
+            </Link>
+   
+            <Link to={{
+               pathname: this.state.pathname,
+               state: {title: this.state.tiles[1].title}
+            }}><Tile className={this.state.className} title={this.state.tiles[1].title} src={this.state.tiles[1].src} desc={this.state.tiles[1].desc}/>
+            </Link>
+   
+            <Link to={{
+               pathname: this.state.pathname,
+               state: {title: this.state.tiles[2].title}
+            }}><Tile className={this.state.className} title={this.state.tiles[2].title} src={this.state.tiles[2].src} desc={this.state.tiles[2].desc}/>
+            </Link>
+   
+            <Link to={{
+               pathname: this.state.pathname,
+               state: {title: this.state.tiles[3].title}
+            }}><Tile className={this.state.className} title={this.state.tiles[3].title} src={this.state.tiles[3].src} desc={this.state.tiles[3].desc}/>
+            </Link>
+   
+            <Link to={{
+               pathname: this.state.pathname,
+               state: {title: this.state.tiles[4].title}
+            }}><Tile className={this.state.className} title={this.state.tiles[4].title} src={this.state.tiles[4].src} desc={this.state.tiles[4].desc}/>
+            </Link>
+   
+            <Link to={{
+               pathname: this.state.pathname,
+               state: {title: this.state.tiles[5].title}
+            }}><Tile className={this.state.className} title={this.state.tiles[5].title} src={this.state.tiles[5].src} desc={this.state.tiles[5].desc}/>
+            </Link>
+         </div>
+         </>
+      )
+   }
 }
 
 ShowsBlock.defaultProps = {

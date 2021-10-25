@@ -11,27 +11,50 @@ class LongBlock extends Component {
             {
                className: 'longTile',
                title: 'Liked Songs',
-               src: 'images/liked-songs.png'
+               src: 'images/liked-songs.png',
+               pathname: '/playlist',
             },
             {
                className: 'longTile podcast',
                title: 'Simple Programmer Podcast 058: Statue of Liberty',
-               src: 'images/simple-programmer.png'
+               src: 'images/simple-programmer.png',
+               pathname: '/podcast',
             },
             {
                className: 'longTile podcast',
                title: 'How Did You Calculate That Return?',
-               src: 'images/chooseFI.png'
+               src: 'images/chooseFI.png',
+               pathname: '/podcast',
             },
             {
                className: 'longTile podcast',
-               title: 'Simple Programmer Podcast 058: Statue of Liberty',
-               src: 'images/simple-programmer.png'
+               title: 'Coding Bootcamp 101: An Honest Review of FullStack Academy with Buddy Galletti',
+               src: 'images/one-month.png',
+               pathname: '/podcast',
             },
             {
                className: 'longTile podcast',
-               title: 'Simple Programmer Podcast 058: Statue of Liberty',
-               src: 'images/simple-programmer.png'
+               title: 'Creeds of Craftsmanship - JSJ 505',
+               src: 'images/javascript-jabber.png',
+               pathname: '/podcast',
+            },
+            {
+               className: 'longTile',
+               title: 'The House is Burning',
+               src: 'images/thib-Isaiah-Rashad.png',
+               pathname: '/playlist',
+            },
+            {
+               className: 'longTile',
+               title: 'Daily Mix 1',
+               src: 'images/daily-mix-1.png',
+               pathname: '/playlist',
+            },
+            {
+               className: 'longTile',
+               title: 'The Melodic Blue',
+               src: 'images/the-melodic-blue-Baby-Keem.png',
+               pathname: '/playlist',
             },
          ],         
          seeAll: true,
@@ -44,111 +67,57 @@ class LongBlock extends Component {
          <div className={this.props.className}>
 
             <Link to={{
-               pathname: '/playlist',
+               pathname: this.state.tiles[0].pathname,
                state: {title: this.state.tiles[0].title}
             }}><LongTile className={this.state.tiles[0].className} title={this.state.tiles[0].title} src={this.state.tiles[0].src}/>
             </Link>
    
             <Link to={{
-               pathname: '/podcast',
+               pathname: this.state.tiles[1].pathname,
                state: {title: this.state.tiles[1].title,}
             }}><LongTile className={this.state.tiles[1].className} title={this.state.tiles[1].title} src={this.state.tiles[1].src}/>
             </Link>
    
             <Link to={{
-               pathname: '/podcast',
-               state: {title: 'ChooseFi | Financial Independence Podcast'}
+               pathname: this.state.tiles[2].pathname,
+               state: {title: this.state.tiles[2].title}
             }}><LongTile className={this.state.tiles[2].className} title={this.state.tiles[2].title} src={this.state.tiles[2].src}/>
             </Link>
    
             <Link to={{
-               pathname: '/podcast',
-               state: {title: 'Learn to Code'}
-            }}><LongTile className='longTile podcast' title='Coding Bootcamp 101: An Honest Review of FullStack Academy with Buddy Galletti' src='images/one-month.png' />
+               pathname: this.state.tiles[3].pathname,
+               state: {title: this.state.tiles[3].title}
+            }}><LongTile className={this.state.tiles[3].className} title={this.state.tiles[3].title} src={this.state.tiles[3].src}/>
             </Link>
             
             <Link to={{
-               pathname: '/podcast',
-               state: {title: 'JavaScript Jabber'}
-            }}><LongTile className='longTile podcast' title='Creeds of Craftsmanship - JSJ 505' src='images/javascript-jabber.png' />
+               pathname: this.state.tiles[4].pathname,
+               state: {title: this.state.tiles[4].title}
+            }}><LongTile className={this.state.tiles[4].className} title={this.state.tiles[4].title} src={this.state.tiles[4].src}/>
             </Link>
    
             <Link to={{
-               pathname: '/playlist',
-               state: {title: 'The House is Burning'}
-            }}><LongTile className='longTile' title='The House is Burning' src='images/thib-Isaiah-Rashad.png' />
+               pathname: this.state.tiles[5].pathname,
+               state: {title: this.state.tiles[5].title}
+            }}><LongTile className={this.state.tiles[5].className} title={this.state.tiles[5].title} src={this.state.tiles[5].src}/>
             </Link>
    
             <Link to={{
-               pathname: '/playlist',
-               state: {title: 'Daily Mix 1'}
-            }}><LongTile className='longTile' title='Daily Mix 1' src='images/daily-mix-1.png' />
+               pathname: this.state.tiles[6].pathname,
+               state: {title: this.state.tiles[6].title}
+            }}><LongTile className={this.state.tiles[6].className} title={this.state.tiles[6].title} src={this.state.tiles[6].src}/>
             </Link>
    
             <Link to={{
-               pathname: '/playlist',
-               state: {title: 'The Melodic Blue'}
-            }}><LongTile className='longTile' title='The Melodic Blue' src='images/the-melodic-blue-Baby-Keem.png' />
+               pathname: this.state.tiles[7].pathname,
+               state: {title: this.state.tiles[7].title}
+            }}><LongTile className={this.state.tiles[7].className} title={this.state.tiles[7].title} src={this.state.tiles[7].src}/>
             </Link>
          </div>
       )
    }
 }
 
-// const LongBlock = ({className}) => {
-//    return (
-//       <div className={className}>
-//          <Link to={{
-//             pathname: '/playlist',
-//             state: {title: 'Liked Songs'}
-//          }}><LongTile className='longTile' title='Liked Songs' src='images/liked-songs.png'/>
-//          </Link>
-
-//          <Link to={{
-//             pathname: '/podcast',
-//             state: {
-//                title: 'Simple Programmer Podcast',}
-//          }}><LongTile className='longTile podcast' title='Simple Programmer Podcast 058: Statue of Liberty' src='images/simple-programmer.png' />
-//          </Link>
-
-//          <Link to={{
-//             pathname: '/podcast',
-//             state: {title: 'ChooseFi | Financial Independence Podcast'}
-//          }}><LongTile className='longTile podcast' title='How Did You Calculate That Return?' src='images/chooseFI.png' />
-//          </Link>
-
-//          <Link to={{
-//             pathname: '/podcast',
-//             state: {title: 'Learn to Code'}
-//          }}><LongTile className='longTile podcast' title='Coding Bootcamp 101: An Honest Review of FullStack Academy with Buddy Galletti' src='images/one-month.png' />
-//          </Link>
-         
-//          <Link to={{
-//             pathname: '/podcast',
-//             state: {title: 'JavaScript Jabber'}
-//          }}><LongTile className='longTile podcast' title='Creeds of Craftsmanship - JSJ 505' src='images/javascript-jabber.png' />
-//          </Link>
-
-//          <Link to={{
-//             pathname: '/playlist',
-//             state: {title: 'The House is Burning'}
-//          }}><LongTile className='longTile' title='The House is Burning' src='images/thib-Isaiah-Rashad.png' />
-//          </Link>
-
-//          <Link to={{
-//             pathname: '/playlist',
-//             state: {title: 'Daily Mix 1'}
-//          }}><LongTile className='longTile' title='Daily Mix 1' src='images/daily-mix-1.png' />
-//          </Link>
-
-//          <Link to={{
-//             pathname: '/playlist',
-//             state: {title: 'The Melodic Blue'}
-//          }}><LongTile className='longTile' title='The Melodic Blue' src='images/the-melodic-blue-Baby-Keem.png' />
-//          </Link>
-//       </div>
-//    )
-// }
 
 LongBlock.defaultProps = {
    className: '',
