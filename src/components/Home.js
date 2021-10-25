@@ -284,7 +284,7 @@ class Home extends Component {
                               return(
                                  <Link to={{
                                     pathname: tile.pathname,
-                                    title: tile.title
+                                    state: {title: tile.title}
                                  }}><LongTile className={tile.className} title={tile.title} src={tile.src} />                                    
                                  </Link>
                               )
@@ -300,7 +300,7 @@ class Home extends Component {
                                  return(
                                     <Link to={{
                                        pathname: tile.pathname,
-                                       title: tile.title
+                                       state: {title: tile.title}
                                     }}><Tile className={tile.className} title={tile.title} src={tile.src} desc={tile.desc} />
                                     </Link>
                                  )
