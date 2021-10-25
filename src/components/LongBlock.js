@@ -65,54 +65,17 @@ class LongBlock extends Component {
    render() {
       return (
          <div className={this.props.className}>
-
-            <Link to={{
-               pathname: this.state.tiles[0].pathname,
-               state: {title: this.state.tiles[0].title}
-            }}><LongTile className={this.state.tiles[0].className} title={this.state.tiles[0].title} src={this.state.tiles[0].src}/>
-            </Link>
-   
-            <Link to={{
-               pathname: this.state.tiles[1].pathname,
-               state: {title: this.state.tiles[1].title,}
-            }}><LongTile className={this.state.tiles[1].className} title={this.state.tiles[1].title} src={this.state.tiles[1].src}/>
-            </Link>
-   
-            <Link to={{
-               pathname: this.state.tiles[2].pathname,
-               state: {title: this.state.tiles[2].title}
-            }}><LongTile className={this.state.tiles[2].className} title={this.state.tiles[2].title} src={this.state.tiles[2].src}/>
-            </Link>
-   
-            <Link to={{
-               pathname: this.state.tiles[3].pathname,
-               state: {title: this.state.tiles[3].title}
-            }}><LongTile className={this.state.tiles[3].className} title={this.state.tiles[3].title} src={this.state.tiles[3].src}/>
-            </Link>
-            
-            <Link to={{
-               pathname: this.state.tiles[4].pathname,
-               state: {title: this.state.tiles[4].title}
-            }}><LongTile className={this.state.tiles[4].className} title={this.state.tiles[4].title} src={this.state.tiles[4].src}/>
-            </Link>
-   
-            <Link to={{
-               pathname: this.state.tiles[5].pathname,
-               state: {title: this.state.tiles[5].title}
-            }}><LongTile className={this.state.tiles[5].className} title={this.state.tiles[5].title} src={this.state.tiles[5].src}/>
-            </Link>
-   
-            <Link to={{
-               pathname: this.state.tiles[6].pathname,
-               state: {title: this.state.tiles[6].title}
-            }}><LongTile className={this.state.tiles[6].className} title={this.state.tiles[6].title} src={this.state.tiles[6].src}/>
-            </Link>
-   
-            <Link to={{
-               pathname: this.state.tiles[7].pathname,
-               state: {title: this.state.tiles[7].title}
-            }}><LongTile className={this.state.tiles[7].className} title={this.state.tiles[7].title} src={this.state.tiles[7].src}/>
-            </Link>
+         {
+            this.state.tiles.map(tile => {
+               return(
+                  <Link to={{
+                  pathname: tile.pathname,
+                  state: {title: tile.title}
+                  }}><LongTile className={tile.className} title={tile.title} src={tile.src}/>
+                  </Link>
+               )
+            })
+         }
          </div>
       )
    }
