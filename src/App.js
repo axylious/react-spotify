@@ -37,7 +37,7 @@ const App = () => {
           <Playlist className='songs' />
         </Route>
         <Route path='/see-all'>
-          <SeeAll />
+          <SeeAll className='seeAll'/>
         </Route>
       </Switch>
       <FriendActivity className='friendSidebar' />

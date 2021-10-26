@@ -65,14 +65,16 @@ body {
 h1, h2, h3 {
    color: var(--text-primary);
    font-family: var(--font-primary);
+   cursor: default;
 }
 
 a, p {
    color: var(--text-secondary);
+   font-family: var(--font-primary);
 }
 
 /* Home */
-.home, .search, .library, .createPlaylist, .songs {
+.home, .search, .library, .createPlaylist, .songs, .seeAll {
    overflow-y: scroll;
    padding: 2em;
 }
@@ -283,7 +285,25 @@ a, p {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
    column-gap: 1.5em;
+   row-gap: 1.5em;
    overflow: auto;
+}
+
+.blockHead {
+   margin: 1.5em auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.seeAll-btn {
+   text-decoration: none;
+   font-size: .75em;
+   padding: .5em;
+}
+
+.seeAll-btn:hover {
+   text-decoration: underline;
 }
 
 .tile {
