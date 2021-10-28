@@ -424,9 +424,26 @@ class Home extends Component {
                'className': 'block',
             }
          ],
-         'screen': 1920
+         'screen': 0,
       }
+
+      this.updateScreenWidth = this.updateScreenWidth.bind(this)
    }
+
+   componentDidMount() {
+      this.updateScreenWidth()
+      window.addEventListener('resize', this.updateScreenWidth)
+   }
+
+   componentWillUnmount() {
+      window.removeEventListener('resize', this.updateScreenWidth)
+   }
+
+   updateScreenWidth() {
+      this.setState({'screen': window.innerWidth})
+   }
+
+
 
    render() {
       return (
@@ -434,7 +451,6 @@ class Home extends Component {
             <h1>
                Good
                {dayOrNight()}
-               {console.log(this.state.screen)}
             </h1>
             {
                this.state.blocks.map((block, i) => {
@@ -442,7 +458,12 @@ class Home extends Component {
                      i < 1 ? 
                      <div className={block.className}>
                         {
-                           block.tiles.map(tile => {
+                           block.tiles.slice(0, (
+                              this.state.screen < 1920 ?
+                              this.state.screen <= 1024 ?
+                              4 :
+                              6 : block.tiles.length
+                              )).map(tile => {
                               return(
                                  <Link to={{
                                     pathname: tile.pathname,
@@ -467,7 +488,16 @@ class Home extends Component {
                      </div>
                      <div className={block.className}>
                         {
-                           block.tiles.slice(0,6).map(tile => {
+                           block.tiles.slice(0, (
+                              this.state.screen < 1920 ? 
+                              this.state.screen <= 1440 ? 
+                              this.state.screen < 1280 ?
+                              this.state.screen < 1080 ?
+                              this.state.screen <= 768 ?
+                              2 : 4 :
+                              3 : 4 :
+                              5 : 6 
+                           )).map(tile => {
                               return(
                                  <Link to={{
                                     pathname: tile.pathname,
