@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import { Component } from 'react'
-import Friend from './Friend'
-import HideFriend from './HideFriend'
+import Friend from '../Friend/Friend'
+import HideFriend from '../HideFriends/HideFriend'
+import './friendActivity.css'
 
 class FriendActivity extends Component {
    constructor() {

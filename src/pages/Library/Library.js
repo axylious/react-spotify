@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './library.css'
 
 const Library = ({className}) => {
    return (

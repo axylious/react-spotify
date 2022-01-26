@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import {useLocation, Link} from 'react-router-dom'
-import Tile from './Tile'
+import Tile from '../Tile/Tile'
+import './seeAll.css'
 
 const SeeAll = ({className}) => {
    let location = useLocation()

@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
-import Tile from '../components/Tile'
-import LongTile from '../components/LongTile'
+import Tile from '../../components/Tile/Tile'
+import LongTile from '../../components/LongTile/LongTile'
 import { Component } from 'react'
+import './home.css'
 
 class Home extends Component {
    constructor() {

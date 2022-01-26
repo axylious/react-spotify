@@ -1,0 +1,68 @@
+.tile {
+   min-height: 300px;
+   display: flex;
+   flex-flow: column;
+   padding: 1em 1em;
+   border-radius: .25em;
+   background: rgba(136, 136, 136, 0.1);
+   transition: var(--transition-hover);
+}
+
+.tile:hover {
+   background: rgba(136, 136, 136, 0.25);
+}
+
+.tile .tilePic {
+   width: 100%;
+   background: var(--bg-color-primary);
+   border-radius: .1em;
+   margin-bottom: -1.5em;
+   margin-left: auto;
+   margin-right: auto;
+   box-shadow: 3px 9px 21px rgba(0,0,0,.5);
+}
+
+.tile svg {
+   position: relative;
+   background: var(--play-btn-bg);
+   border-radius: 50%;
+   color: var(--btn-color);
+   top: -.75em;
+   left: 2.25em;
+   font-size: 3em;
+   transform: translateY(10%);
+   opacity: 0;
+   transition: var(--transition-hover);
+}
+
+.tile:hover svg {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.tile svg:hover {
+   transform: scale(1.1);
+}
+
+.tile.podcast:hover svg {
+   opacity: 0;
+}
+
+.tile h2 {
+   font-size: .9em;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.tile p {
+   font-size: .8em;
+   font-weight: 400;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   overflow: hidden;
+}
+
+.tile.podcast .tilePic {border-radius: .5em;}
+.tile.artist .tilePic {border-radius: 50%;}

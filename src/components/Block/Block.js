@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
-import Tile from './Tile'
+import Tile from '../Tile/Tile'
 
 const Block = (props) => {
    return (

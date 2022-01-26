@@ -1,0 +1,46 @@
+/* Home */
+.home {
+   overflow-y: scroll;
+   padding: 2em;
+}
+
+.home h1, .home a {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+}
+
+.home>h1, .home>h2 {
+   margin-bottom: .5em;
+}
+
+.home>h2 {
+   margin-top: 2em;
+}
+
+.block {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+   column-gap: 1.5em;
+   row-gap: 1.5em;
+}
+
+.blockHead {
+   margin: 1.5em auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.seeAll-btn {
+   text-decoration: none;
+   font-size: .75em;
+   padding: .5em;
+}
+
+.seeAll-btn:hover {
+   text-decoration: underline;
+}
+
+.block a {
+   text-decoration: none;
+}

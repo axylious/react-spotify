@@ -1,0 +1,53 @@
+.friend {
+   margin-bottom: 1.5em;
+}
+
+.friend .img {
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   background-color: #404040;
+   float: left;
+   margin-right: 1em;
+}
+
+.friend button {
+   border: none;
+   color: var(--text-secondary);
+   background: inherit;
+}
+
+.friendName {
+   font-size: .8em;
+   font-weight: 700;
+}
+
+.friendName:hover, .songInfo button:hover {
+   text-decoration: underline;
+   cursor: pointer;
+   color: var(--text-primary);
+}
+
+.friendSidebar button, .friendSidebar p {
+   font-family: var(--font-primary);
+   font-size: .65em;
+}
+
+.friendSidebar button:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.lastPlayed {
+   float: right;
+}
+
+.friendPlay {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.friendPlay+.friendPlay {
+   margin-left: .5em;
+}

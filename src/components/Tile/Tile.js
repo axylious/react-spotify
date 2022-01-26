@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import './tile.css'
 
 
 const Tile = ({title, className, desc, src}) => {

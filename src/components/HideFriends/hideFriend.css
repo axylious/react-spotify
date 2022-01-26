@@ -1,0 +1,17 @@
+.hidden {
+   display: flex;
+   flex-flow: column;
+   width: 100%;
+}
+
+.hideFriend .img {
+   margin: .5em 0;
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   background-color: #404040;
+}
+
+.hidden button, .hidden p {
+   display: none;
+}

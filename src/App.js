@@ -1,19 +1,21 @@
 import { Route, Switch } from 'react-router';
-import FriendActivity from './components/FriendActivity'
-import Home from './pages/Home'
-import Sidebar from './components/Sidebar'
-import Search from './pages/Search'
-import Library from './pages/Library'
-import CreatePlaylist from './pages/CreatePlaylist';
-import LikedSongs from './pages/LikedSongs';
-import Playlist from './pages/Playlist'
-import SeeAll from './components/SeeAll'
+import FriendActivity from './components/FriendActivity/FriendActivity'
+import Home from './pages/Home/Home'
+import Sidebar from './components/Sidebar/Sidebar'
+import Search from './pages/Search/Search'
+import Library from './pages/Library/Library'
+import CreatePlaylist from './pages/CreatePlaylist/CreatePlaylist';
+import LikedSongs from './pages/LikedSongs/LikedSongs';
+import Playlist from './pages/Playlist/Playlist'
+import SeeAll from './components/SeeAll/SeeAll'
+import { Nav } from './components/Nav/Nav';
 
 
 const App = () => {
   return (
     <div className='App'>
       <Sidebar className='sidebar' />
+      <Nav className='nav' />
       <Switch>
         <Route path='/' exact>
           <Home className='home'/>

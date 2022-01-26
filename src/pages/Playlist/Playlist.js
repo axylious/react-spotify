@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import {useLocation} from 'react-router-dom'
+import './playlist.css'
 
-const Podscast = ({className}) => {
+const Playlist = ({className}) => {
    let location = useLocation();
 
    return (
@@ -11,14 +12,14 @@ const Podscast = ({className}) => {
    )
 }
 
-Podscast.defaultProps = {
+Playlist.defaultProps = {
    className: '',
    title: '',
 }
 
-Podscast.propTypes = {
+Playlist.propTypes = {
    className: PropTypes.string,
    title: PropTypes.string,
 }
 
-export default Podscast
+export default Playlist

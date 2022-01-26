@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import './hideFriend.css'
 
 const Friend = ({className}) => {
    return (
@@ -12,13 +13,6 @@ const Friend = ({className}) => {
                color: 'white',
                }} />
          </div>
-         <button className='friendName'>Friends Name</button>
-         <p className='lastPlayed'>2 hr</p>
-         <div className='songInfo'>
-            <button className='friendPlay' id='track'>Current Track </button>
-            <button className='friendPlay' id='artist'>Artist</button>
-         </div>
-         <button className='friendPlayAlbum'>Current Album</button>
       </div>
    )
 }

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import './longTile.css'
 
 
 const LongTile = ({title, className, src}) => {

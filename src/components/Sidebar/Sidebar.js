@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types'
 import {NavLink, Link} from 'react-router-dom'
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import SearchIcon from '@mui/icons-material/Search';
-import LibraryMusicOutlinedIcon from '@mui/icons-material/LibraryMusicOutlined';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { HomeOutlined, Search, LibraryMusicOutlined, AddBox, FavoriteBorder } from '@mui/icons-material';
+import './sidebar.css'
 
 const Sidebar = ({className}) => {
    return (
       <div className={className}>
          <div className='sideGroup'>
             <NavLink exact to='/'>
-               <HomeOutlinedIcon sx={{
+               <HomeOutlined sx={{
                   position: 'relative',
                   mr: 1.5,
                }}/>
@@ -19,7 +16,7 @@ const Sidebar = ({className}) => {
             </NavLink>
 
             <NavLink to='/search'>
-               <SearchIcon sx={{
+               <Search sx={{
                   position: 'relative',
                   mr: 1.5,
                }}/>
@@ -27,7 +24,7 @@ const Sidebar = ({className}) => {
             </NavLink>
 
             <NavLink to='/library'>
-               <LibraryMusicOutlinedIcon sx={{
+               <LibraryMusicOutlined sx={{
                   position: 'relative',
                   mr: 1.5,
                }}/>
@@ -37,7 +34,7 @@ const Sidebar = ({className}) => {
          
          
          <Link to='/create-playlist'>
-            <AddBoxIcon sx={{
+            <AddBox sx={{
                position: 'relative',
                mr: 1.5,
             }}/>
@@ -45,13 +42,13 @@ const Sidebar = ({className}) => {
          </Link>
 
          <Link to='/liked-songs'>
-            <FavoriteBorderIcon sx={{
+            <FavoriteBorder sx={{
                position: 'relative',
                mr: 1.5,
             }}/>
             Liked Songs
          </Link>
-
+         <hr/>
          <div className='sidePlaylists'>
             <Link to={{
                pathname: '/playlist',

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './search.css'
 
 const Search = ({className}) => {
    return (

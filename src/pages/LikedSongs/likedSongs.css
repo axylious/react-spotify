@@ -1,0 +1,4 @@
+.songs {
+   overflow-y: scroll;
+   padding: 2em;
+}
