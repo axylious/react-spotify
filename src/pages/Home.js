@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
-import Tile from './Tile'
-import LongTile from './LongTile'
+import Tile from '../components/Tile'
+import LongTile from '../components/LongTile'
 import { Component } from 'react'
 
 class Home extends Component {

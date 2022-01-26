@@ -1,12 +1,12 @@
 import { Route, Switch } from 'react-router';
 import FriendActivity from './components/FriendActivity'
-import Home from './components/Home'
+import Home from './pages/Home'
 import Sidebar from './components/Sidebar'
-import Search from './components/Search'
-import Library from './components/Library'
-import CreatePlaylist from './components/CreatePlaylist';
-import LikedSongs from './components/LikedSongs';
-import Playlist from './components/Playlist'
+import Search from './pages/Search'
+import Library from './pages/Library'
+import CreatePlaylist from './pages/CreatePlaylist';
+import LikedSongs from './pages/LikedSongs';
+import Playlist from './pages/Playlist'
 import SeeAll from './components/SeeAll'
 
 
