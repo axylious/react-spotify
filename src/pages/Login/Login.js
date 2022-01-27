@@ -14,7 +14,6 @@ const scopes = [
 
 export const handleLogin = () => {
    window.location = `${authEndpoint}?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`
-   
 }
 
 export const getParams = (hash) => {
@@ -25,9 +24,11 @@ export const getParams = (hash) => {
      accumulator[key] = value
      return accumulator
    }, {})
+   window.location.replace('')
    return splitUp
 }
 
 export const handleLogout = () => {
    sessionStorage.clear()
+   window.location.reload()
 }
