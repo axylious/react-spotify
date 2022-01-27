@@ -5,6 +5,7 @@
    height: 50px;
    /* background-color: white; */
    padding: 0 2em;
+   z-index: 999;
 }
 
 .navLeft {
@@ -73,6 +74,12 @@
 
 .navMenuItems hr {
    width: 100%;
-   border: 1px solid rgba(255,255,255,.2);
+   height: 1px;
+   background-color: rgba(255,255,255,.5);
+   border: none;
    margin: 0 auto;
+}
+
+#logIn {
+   padding: 3px 1.5em;
 }

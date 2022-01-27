@@ -16,31 +16,34 @@
    width: 100%;
    background: var(--bg-color-primary);
    border-radius: .1em;
-   margin-bottom: -1.5em;
-   margin-left: auto;
-   margin-right: auto;
+   margin: 0 auto 1.5em;
    box-shadow: 3px 9px 21px rgba(0,0,0,.5);
 }
 
-.tile svg {
+.imgWrapper {
    position: relative;
+   height: 100%;
+}
+
+.imgWrapper svg {
+   position: absolute;
    background: var(--play-btn-bg);
    border-radius: 50%;
    color: var(--btn-color);
-   top: -.75em;
-   left: 2.25em;
+   bottom: 1em;
+   right: 5px;
    font-size: 3em;
    transform: translateY(10%);
    opacity: 0;
    transition: var(--transition-hover);
 }
 
-.tile:hover svg {
+.tile:hover .imgWrapper svg {
    opacity: 1;
    transform: translateY(0);
 }
 
-.tile svg:hover {
+.imgWrapper>svg:hover {
    transform: scale(1.1);
 }
 
@@ -48,14 +51,14 @@
    opacity: 0;
 }
 
-.tile h2 {
+.textWrapper h2 {
    font-size: .9em;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
 }
 
-.tile p {
+.textWrapper p {
    font-size: .8em;
    font-weight: 400;
    display: -webkit-box;

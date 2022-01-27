@@ -1,12 +1,43 @@
 import {ArrowBackIos, ArrowDropDown, ArrowDropUp, ArrowForwardIos} from '@mui/icons-material'
 import { useState } from 'react';
+import { handleLogin, handleLogout } from '../../pages/Login/Login';
 import './nav.css'
 
-export const Nav = () => {
+export default function Nav({token}) {
    const [isDropped, setIsDropped] = useState(false)
 
    const handleClick = () => {
       setIsDropped(!isDropped)
+   }
+
+   const UserNav = () => {
+      return (
+         <div className='navMenu' onClick={handleClick}>
+            <div className='navMenuProfile'>
+               <img className='navMenuImg' src='./images/A-Wall.png' alt=''></img>
+               <p>Axel</p>
+               {isDropped ? <ArrowDropUp /> : <ArrowDropDown />}
+            </div>
+            {isDropped && 
+               <div className='navMenuItems'>
+                  <p>Profile</p>
+                  <p>Settings</p>
+                  <hr/>
+                  <p onClick={handleLogout}>Logout</p>
+               </div>
+            }
+         </div>
+      )
+   }
+
+   const LoginNav = () => {
+      return (
+         <div className='navMenu' onClick={handleLogin}>
+            <div className='navMenuProfile'>
+               <p id='logIn'>Log In</p>
+            </div>
+         </div>
+      )
    }
 
    return (
@@ -32,22 +63,8 @@ export const Nav = () => {
             </div>
          </div>
          <div className='navRight'>
-            <div className='navMenu' onClick={handleClick}>
-               <div className='navMenuProfile'>
-                  <img className='navMenuImg' src='./images/A-Wall.png' alt=''></img>
-                  <p>Axel</p>
-                  {isDropped ? <ArrowDropUp /> : <ArrowDropDown />}
-               </div>
-               {isDropped && 
-                  <div className='navMenuItems'>
-                     <p>Profile</p>
-                     <p>Settings</p>
-                     <hr/>
-                     <p>Logout</p>
-                  </div>
-               }
-            </div>
+            {token ? <UserNav /> : <LoginNav />}
          </div>
       </div>
-   )  
-};
+   )
+}
