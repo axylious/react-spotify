@@ -80,6 +80,15 @@
    margin: 0 auto;
 }
 
-#logIn {
+.navMenuProfile.login {
+   background-color: var(--btn-color);
+   transition: var(--transition-hover);
+}
+
+.navMenuProfile.login:hover {
+   background-color: var(--btn-color-hover);
+}
+
+#loginBtn {
    padding: 3px 1.5em;
 }

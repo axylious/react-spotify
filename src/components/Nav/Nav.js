@@ -1,6 +1,6 @@
 import {ArrowBackIos, ArrowDropDown, ArrowDropUp, ArrowForwardIos} from '@mui/icons-material'
 import { useState } from 'react';
-import { handleLogin, handleLogout } from '../../pages/Login/Login';
+import { handleLogin, handleLogout } from '../../ApiCalls/Login';
 import './nav.css'
 
 export default function Nav({token}) {
@@ -32,9 +32,9 @@ export default function Nav({token}) {
 
    const LoginNav = () => {
       return (
-         <div className='navMenu' onClick={handleLogin}>
-            <div className='navMenuProfile'>
-               <p id='logIn'>Log In</p>
+         <div className='navMenu login' onClick={handleLogin}>
+            <div className='navMenuProfile login'>
+               <p id='loginBtn'>Log In</p>
             </div>
          </div>
       )

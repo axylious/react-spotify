@@ -3,13 +3,17 @@ const clientID = process.env.REACT_APP_SPOTIFY_CLIENT
 const redirectURI = process.env.REACT_APP_SPOTIFY_REDIRECT
 
 const scopes = [
-   'user-read-currently-playing',
-   'user-read-recently-played',
    'user-read-playback-state',
-   'user-top-read',
-   'user-modify-playback-state',
+   'user-read-private',
    'user-follow-read',
+   'user-library-read',
+   'playlist-modify-private',
+   'playlist-read-collaborative',
+   'user-read-email',
    'playlist-read-private',
+   'user-top-read',
+   'playlist-modify-public',
+   'user-read-recently-played',
 ]
 
 export const handleLogin = () => {

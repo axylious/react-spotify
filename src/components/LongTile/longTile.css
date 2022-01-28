@@ -46,7 +46,7 @@
 }
 
 .longTile svg {
-   color: var(--btn-color);
+   color: var(--btn-color-hover);
    background: var(--play-btn-bg);
    border-radius: 50%;
    font-size: 2.5em;

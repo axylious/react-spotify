@@ -1,5 +1,6 @@
 :root {
-   --btn-color: #1DD75F;
+   --btn-color: #1aa34a;
+   --btn-color-hover: #1DD75F;
    --text-primary: #ffffff;
    --text-secondary: #888; 
    --font-primary: 'Poppins', sans-serif;

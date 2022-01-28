@@ -29,7 +29,7 @@
    position: absolute;
    background: var(--play-btn-bg);
    border-radius: 50%;
-   color: var(--btn-color);
+   color: var(--btn-color-hover);
    bottom: 1em;
    right: 5px;
    font-size: 3em;

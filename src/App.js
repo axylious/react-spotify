@@ -10,7 +10,7 @@ import LikedSongs from './pages/LikedSongs/LikedSongs';
 import Playlist from './pages/Playlist/Playlist'
 import SeeAll from './components/SeeAll/SeeAll'
 import Nav from './components/Nav/Nav';
-import {getParams} from './pages/Login/Login'
+import {getParams} from './ApiCalls/Login'
 
 
 const App = () => {
